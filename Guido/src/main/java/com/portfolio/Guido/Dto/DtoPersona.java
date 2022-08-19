@@ -1,39 +1,30 @@
 
-package com.portfolio.Guido.entity;
+package com.portfolio.Guido.Dto;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.validation.constraints.NotBlank;
 
-@Entity
-public class Persona {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+
+public class DtoPersona {
+    @NotBlank
     private String nombre;
+    @NotBlank
     private String apellido;
+    @NotBlank
     private String imgPerfil;
+    @NotBlank
     private String puesto;
+    @NotBlank
     private String descripcionPuesto;
 
-    public Persona() {
+    public DtoPersona() {
     }
 
-    public Persona(String nombre, String apellido, String imgPerfil, String puesto, String descripcionPuesto) {
+    public DtoPersona(String nombre, String apellido, String imgPerfil, String puesto, String descripcionPuesto) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.imgPerfil = imgPerfil;
         this.puesto = puesto;
         this.descripcionPuesto = descripcionPuesto;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getNombre() {
@@ -77,6 +68,6 @@ public class Persona {
     }
     
     
+    
+    
 }
-
-
